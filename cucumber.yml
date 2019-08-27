@@ -1,0 +1,3 @@
+default: --format pretty --format html --out=report.html
+iphone_sim: DEVICE_NAME='iphone_sim'
+pixel_emu: DEVICE_NAME='pixel_emu'
