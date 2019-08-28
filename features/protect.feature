@@ -5,4 +5,3 @@ Scenario: Login
   When I enter username and password
   Then the login should be successfull
   
-  

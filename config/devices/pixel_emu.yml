@@ -1,10 +1,7 @@
 ---
   :caps:
     :platformName: "Android"
-    :deviceName: "Pixel 3 API 28"
     :platformVersion: "9"
-    :noReset: true
+    :deviceName: "Pixel 3 API 28"
+    :automationName: "UiAutomator2"
     :app: "/Users/asusters/Desktop/protect/test-protect-poc/apps/app-playStore-release.apk"
-  :appium_lib:
-    :sauce_username: false
-    :sauce_access_key: false
