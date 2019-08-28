@@ -1,3 +1,3 @@
 default: --format pretty --format html --out=report.html
-iphone_sim: DEVICE_NAME='iphone_sim'
-pixel_emu: DEVICE_NAME='pixel_emu'
+iphone_sim: DEVICE_CONFIG="config/devices/iphone_sim.yml"
+pixel_emu: DEVICE_CONFIG="config/devices/pixel_emu.yml"

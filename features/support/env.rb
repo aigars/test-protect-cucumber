@@ -1,14 +1,12 @@
 require 'appium_lib'
 require 'rspec'
 
-accounts = YAML.load_file("features/config/accounts.yml")
-
-case ENV['DEVICE_NAME']
-  when 'iphone_sim'
-  caps = Appium.load_appium_txt file: File.expand_path("../../config/devices/iphone_sim/appium.txt", __FILE__), verbose: true
-  when 'pixel_emu'
-  caps = Appium.load_appium_txt file: File.expand_path("../../config/devices/pixel_emu/appium.txt", __FILE__), verbose: true
-end
+caps = YAML.load_file(ENV["DEVICE_CONFIG"])
+accounts = YAML.load_file("config/accounts.yml")
+setups = YAML.load_file("config/setups.yml")
+puts caps
+puts accounts
+puts setups
 
 $driver = Appium::Driver.new(caps, true)
 

@@ -1,0 +1,12 @@
+---
+  setup1:
+    camera1:
+      id: ""
+      name: ""
+  setup2:
+    camera1:
+      id: ""
+      name: ""
+    camera2:
+      id: ""
+      namne: ""
