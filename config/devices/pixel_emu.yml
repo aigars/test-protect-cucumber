@@ -5,4 +5,4 @@
     :deviceName: "Pixel 3 API 28"
     :automationName: "UiAutomator2"
     :fullReset: true
-    :app: "/Users/asusters/Desktop/protect/test-protect-poc/apps/app-playStore-release.apk"
+    :app: "/Users/asusters/Desktop/protect/test-protect-cucumber/apps/app-playStore-release.apk"

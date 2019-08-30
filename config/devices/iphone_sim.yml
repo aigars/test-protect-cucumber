@@ -5,4 +5,4 @@
     :deviceName: "iPhone 7"
     :automationName: "XCUITest"
     :fullReset: true
-    :app: "/Users/asusters/Desktop/protect/test-protect-poc/apps/UniFi Protect.ipa"
+    :app: "/Users/asusters/Desktop/protect/test-protect-cucumber/apps/UniFi Protect.ipa"
