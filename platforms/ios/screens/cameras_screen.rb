@@ -12,7 +12,11 @@ class CamerasScreen
   end
 
   def get_add_cameras_btn
-    $driver.find_element(ADD_CAMERAS_BTN)
+    begin
+      $driver.find_element(ADD_CAMERAS_BTN)
+    rescue
+      nil
+    end
   end
 
   def click_whats_new_ok_btn

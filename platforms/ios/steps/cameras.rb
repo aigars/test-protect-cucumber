@@ -1,4 +1,5 @@
 module Cameras
-  @cameras_screen = CamerasScreen.new
-
+  def cameras
+    puts "cameras module"
+  end
 end

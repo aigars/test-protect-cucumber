@@ -1,8 +1,5 @@
-#require_relative 'login.rb'
+#require_all "platforms/android"
 
 class StepsAndroid
-  def login
     extend Login
-  end
-
 end

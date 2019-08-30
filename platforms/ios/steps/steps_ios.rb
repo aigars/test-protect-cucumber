@@ -1,4 +1,4 @@
-require_all 'platforms/ios'
+require_all "platforms/ios"
 
 class StepsIOS
   def login

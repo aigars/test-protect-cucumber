@@ -4,7 +4,7 @@ module Login
     @login_screen.click_allow_notifications if @login_screen.get_notifications_alert
     @login_screen.get_login_screen_text
   end
-  
+
   def enter_username_and_password
     @login_screen.enter_username("protect.rix1@gmail.com")
     @login_screen.enter_password("kfnsyKhr")
