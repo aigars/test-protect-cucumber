@@ -1,7 +1,7 @@
 class CamerasScreen
-  WHATS_NEW_MESSAGE = {name: "What's new?"}
-  OK_BTN = {name: 'OK'}
-  ADD_CAMERAS_BTN = {name: 'Add Cameras'}
+  WHATS_NEW_MESSAGE = {uiautomator: 'UiSelector().text("What’s new")'}
+  OK_BTN = {uiautomator: 'UiSelector().text("OK")'}
+  ADD_CAMERAS_BTN = {uiautomator: 'UiSelector().text("Add Cameras")'}
 
   def get_whats_new_message
     begin

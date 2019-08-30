@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-gem 'require_all'
 gem 'appium_lib'
 gem 'cucumber'
-gem 'rspec'
+gem 'rspec-expectations'

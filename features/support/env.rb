@@ -1,30 +1,27 @@
-require 'require_all'
 require 'appium_lib'
-require 'rspec'
-require_relative '../../platforms/ios/steps/steps_ios.rb'
-require_relative '../../platforms/android/steps/steps_android.rb'
+require 'rspec/expectations'
 
-caps = YAML.load_file(ENV["DEVICE_CONFIG"])
+caps = YAML.load_file(ENV['DEVICE_CONFIG'])
 platform = caps[:caps][:platformName]
-accounts = YAML.load_file("config/accounts.yml")
-setups = YAML.load_file("config/setups.yml")
 
-$driver = Appium::Driver.new(caps, true)
+# load necesary step definition modules
+case platform
+when 'iOS'
+  Dir["./platforms/ios/**/*.rb"].each {|file| require file}
+when "Android"
+  Dir["./platforms/android/**/*.rb"].each {|file| require file}
+end
+
+$test_setup = YAML.load_file(ENV['TEST_SETUP'])
+
+Before('@full_reset') do
+  caps[:caps][:fullReset] = true
+end
 
 Before do
+  $driver = Appium::Driver.new(caps, true)
   $driver.start_driver
-  # wait for elements 10s
-  $driver.manage.timeouts.implicit_wait = 10
-
-  # load necesary step definition modules
-  case platform
-  when "iOS"
-    @steps = StepsIOS.new
-  when "Android"
-    @steps = StepsAndroid.new
-  end
-  
-  @accounts = accounts
+  $driver.manage.timeouts.implicit_wait = 15 # wait for elements 10s
 end
 
 After do

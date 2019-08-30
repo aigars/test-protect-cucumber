@@ -1,3 +1,3 @@
 default: --format pretty --format html --out=report.html
-iphone_sim: DEVICE_CONFIG="config/devices/iphone_sim.yml"
-pixel_emu: DEVICE_CONFIG="config/devices/pixel_emu.yml"
+iphone_sim: DEVICE_CONFIG='config/devices/iphone_sim.yml' TEST_SETUP='config/test_setups/single_camera.yml'
+pixel_emu: DEVICE_CONFIG='config/devices/pixel_emu.yml' TEST_SETUP='config/test_setups/single_camera.yml'

@@ -1,20 +1,20 @@
 class LoginScreen
-  NOTIFICATIONS_ALERT = { name: '“UniFi Protect” Would Like to Send You Notifications'}
-  ALLOW_NOTIFICATIONS_BTN = { name: "Allow"}
-  LOGIN_SCREEN_TEXT = { name: "Sign in with your Ubiquiti SSO account" }
-  USERNAME_FIELD = { name: "Username"}
-  PASSWORD_FIELD = { name: "Password" }
-  SIGNIN_BTN = { name: "Sign in" }
+  PRIVACY_NOTICE = {uiautomator: 'UiSelector().text("Designed to protect your privacy")'}
+  PRIVACY_NOTICE_CONTINUE_BTN = {uiautomator: 'UiSelector().text("Continue")'}
+  LOGIN_SCREEN_TEXT = {uiautomator: 'UiSelector().text("Sign in with your Ubiquiti SSO account")'}
+  USERNAME_FIELD = {uiautomator: 'UiSelector().text("Email or Username")'}
+  PASSWORD_FIELD = {uiautomator: 'UiSelector().text("Password")'}
+  SIGNIN_BTN = {uiautomator: 'UiSelector().text("Sign In")'}
 
-  def get_notifications_alert
+  def get_privacy_notice
     begin
-      $driver.find_element(NOTIFICATIONS_ALERT)
+      $driver.find_element(PRIVACY_NOTICE)
     rescue
       nil
     end
   end
 
-  def get_login_screen_text
+  def get_login_screen
     begin
       $driver.find_element(LOGIN_SCREEN_TEXT)
     rescue
@@ -22,8 +22,8 @@ class LoginScreen
     end
   end
 
-  def click_allow_notifications
-    get_notifications_alert.find_element(ALLOW_NOTIFICATIONS_BTN).click
+  def click_privacy_notice_continue_btn
+    $driver.find_element(PRIVACY_NOTICE_CONTINUE_BTN).click
   end
 
   def enter_username(username)

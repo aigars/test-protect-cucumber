@@ -1,8 +1,8 @@
 ---
   :caps:
-    :platformName: "Android"
-    :platformVersion: "9"
-    :deviceName: "Pixel 3 API 28"
-    :automationName: "UiAutomator2"
-    :fullReset: true
-    :app: "/Users/asusters/Desktop/protect/test-protect-cucumber/apps/app-playStore-release.apk"
+    :platformName: 'Android'
+    :platformVersion: '9'
+    :deviceName: 'Pixel 3 API 28'
+    :automationName: 'UiAutomator2'
+    :app: '/Users/asusters/Desktop/protect/test-protect-cucumber/apps/app-playStore-release.apk'
+    :appWaitActivity: 'com.ubnt.sections.tos.TermsOfServiceActivity'
