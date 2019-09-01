@@ -1,11 +1,11 @@
-Given("I am at the login screen") do
+Given("I am at the controllers screen") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When("I enter username and password") do
+When("I add new controller") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then("the login should be successfull") do
+Then("The controller should be successfully added") do
   pending # Write code here that turns the phrase above into concrete actions
 end

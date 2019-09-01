@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
-gem 'appium_lib'
-gem 'cucumber'
-gem 'rspec-expectations'
+source "https://rubygems.org"
+gem "appium_lib"
+gem "appium_console"
+gem "cucumber"
+gem "rspec-expectations"

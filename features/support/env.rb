@@ -21,7 +21,11 @@ end
 Before do
   $driver = Appium::Driver.new(caps, true)
   $driver.start_driver
-  $driver.manage.timeouts.implicit_wait = 15 # wait for elements 10s
+  $driver.manage.timeouts.implicit_wait = 15 # how long driver will wait for elements
+end
+
+After('@full_reset') do
+  caps[:caps][:fullReset] = false
 end
 
 After do
