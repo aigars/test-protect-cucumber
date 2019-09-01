@@ -11,7 +11,7 @@ Feature: Protect
     When I add new controller
     Then The controller should be successfully added
 
-  Scenario: Add camera/s
+  Scenario: Add cameras
     Given I am at the cameras screen
     When I add new cameras
     Then the cameras should be successfully added

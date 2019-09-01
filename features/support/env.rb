@@ -1,21 +1,23 @@
-require 'appium_lib'
-require 'rspec/expectations'
+require "appium_lib"
+require "rspec/expectations"
+require "toml"
 
-caps = YAML.load_file(ENV['DEVICE_CONFIG'])
-platform = caps[:caps][:platformName]
+caps = TOML.load_file(ENV["DEVICE_CONFIG"])
+platform = caps["caps"]["platformName"]
 
-# load necesary step definition modules
+# load necessary platform
 case platform
-when 'iOS'
-  Dir["./platforms/ios/**/*.rb"].each {|file| require file}
+when "iOS"
+  Dir["./platforms/ios/**/*.rb"].each { |file| require file }
 when "Android"
-  Dir["./platforms/android/**/*.rb"].each {|file| require file}
+  Dir["./platforms/android/**/*.rb"].each { |file| require file }
 end
 
-$test_setup = YAML.load_file(ENV['TEST_SETUP'])
+$test_setup = TOML.load_file(ENV["SETUP_CONFIG"])
 
-Before('@full_reset') do
-  caps[:caps][:fullReset] = true
+Before("@full_reset") do
+  caps["caps"]["noReset"] = false
+  caps["caps"]["fullReset"] = true
 end
 
 Before do
@@ -24,8 +26,9 @@ Before do
   $driver.manage.timeouts.implicit_wait = 15 # how long driver will wait for elements
 end
 
-After('@full_reset') do
-  caps[:caps][:fullReset] = false
+After("@full_reset") do
+  caps["caps"]["noReset"] = true
+  caps["caps"]["fullReset"] = false
 end
 
 After do
