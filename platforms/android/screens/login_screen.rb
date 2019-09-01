@@ -1,25 +1,17 @@
 class LoginScreen
-  PRIVACY_NOTICE = {uiautomator: 'UiSelector().text("Designed to protect your privacy")'}
-  PRIVACY_NOTICE_CONTINUE_BTN = {uiautomator: 'UiSelector().text("Continue")'}
-  LOGIN_SCREEN_TEXT = {uiautomator: 'UiSelector().text("Sign in with your Ubiquiti SSO account")'}
-  USERNAME_FIELD = {uiautomator: 'UiSelector().text("Email or Username")'}
-  PASSWORD_FIELD = {uiautomator: 'UiSelector().text("Password")'}
-  SIGNIN_BTN = {uiautomator: 'UiSelector().text("Sign In")'}
+  PRIVACY_NOTICE = { uiautomator: 'UiSelector().text("Designed to protect your privacy")' }
+  PRIVACY_NOTICE_CONTINUE_BTN = { uiautomator: 'UiSelector().text("Continue")' }
+  LOGIN_SCREEN_TEXT = { uiautomator: 'UiSelector().text("Sign in with your Ubiquiti SSO account")' }
+  USERNAME_FIELD = { uiautomator: 'UiSelector().text("Email or Username")' }
+  PASSWORD_FIELD = { uiautomator: 'UiSelector().text("Password")' }
+  SIGNIN_BTN = { uiautomator: 'UiSelector().text("Sign In")' }
 
   def get_privacy_notice
-    begin
-      $driver.find_element(PRIVACY_NOTICE)
-    rescue
-      nil
-    end
+    $driver.find_elements(PRIVACY_NOTICE)[0]
   end
 
   def get_login_screen
-    begin
-      $driver.find_element(LOGIN_SCREEN_TEXT)
-    rescue
-      nil
-    end
+    $driver.find_elements(LOGIN_SCREEN_TEXT)[0]
   end
 
   def click_privacy_notice_continue_btn

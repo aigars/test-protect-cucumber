@@ -1,22 +1,14 @@
 class CamerasScreen
-  WHATS_NEW_MESSAGE = {uiautomator: 'UiSelector().text("What’s new")'}
-  OK_BTN = {uiautomator: 'UiSelector().text("OK")'}
-  ADD_CAMERAS_BTN = {uiautomator: 'UiSelector().text("Add Cameras")'}
+  WHATS_NEW_MESSAGE = { uiautomator: 'UiSelector().text("What’s new")' }
+  OK_BTN = { uiautomator: 'UiSelector().text("OK")' }
+  ADD_CAMERAS_BTN = { uiautomator: 'UiSelector().text("Add Cameras")' }
 
   def get_whats_new_message
-    begin
-      $driver.find_element(WHATS_NEW_MESSAGE)
-    rescue
-      nil
-    end
+    $driver.find_elements(WHATS_NEW_MESSAGE)[0]
   end
 
   def get_add_cameras_btn
-    begin
-      $driver.find_element(ADD_CAMERAS_BTN)
-    rescue
-      nil
-    end
+    $driver.find_elements(ADD_CAMERAS_BTN)[0]
   end
 
   def click_whats_new_ok_btn

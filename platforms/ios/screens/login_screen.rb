@@ -7,19 +7,11 @@ class LoginScreen
   SIGNIN_BTN = {name: 'Sign in'}
 
   def get_notifications_alert
-    begin
-      $driver.find_element(NOTIFICATIONS_ALERT)
-    rescue
-      nil
-    end
+    $driver.find_elements(NOTIFICATIONS_ALERT)[0]
   end
 
   def get_login_screen
-    begin
-      $driver.find_element(LOGIN_SCREEN_TEXT)
-    rescue
-      nil
-    end
+    $driver.find_elements(LOGIN_SCREEN_TEXT)[0]
   end
 
   def click_allow_notifications_btn
