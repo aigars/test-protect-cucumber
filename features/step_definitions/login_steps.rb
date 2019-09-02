@@ -1,11 +1,11 @@
 Given("I am at the login screen") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@login.at_the_login_screen).not_to be nil
 end
 
 When("I enter username and password") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @login.enter_username_and_password($setup["username"], $setup["password"])
 end
 
 Then("the login should be successfull") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@login.login_should_be_successfull).not_to be nil
 end

@@ -1,2 +1,17 @@
 username = "protect.rix2@gmail.com"
 password = "hdfgWer8"
+
+[cloudkey]
+mac = "74:83:C2:13:C2:A1"
+type = "UniFi CloudKey+"
+name = "Protect"
+
+[[cameras]]
+mac = "FC:EC:DA:1F:DD:B2"
+type = "UVC G3 Flex"
+name = "Camera 1"
+
+[[cameras]]
+mac = "FC:EC:DA:1F:DC:9B"
+type = "UVC G3 Flex"
+name = "Camera 2"

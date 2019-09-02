@@ -3,6 +3,7 @@ class CamerasScreen
   OK_BTN = { name: "OK" }
   ADD_CAMERAS_BTN = { name: "Add Cameras" }
 
+
   def get_whats_new_message
     $driver.find_elements(WHATS_NEW_MESSAGE)[0]
   end
@@ -12,7 +13,11 @@ class CamerasScreen
   end
 
   def get_camera(name)
-    $driver.find_elements(:xpath, '//*[@name="' + name + '"]/../..')[0]
+    $driver.find_elements(:xpath, '//XCUIElementTypeStaticText[@name="' + name + '"]/../../../..')[0]
+  end
+  
+  def get_cameras
+    $driver.find_elements(:xpath, '//XCUIElementTypeImage[@name="camera-gradient"]/../../..')
   end
 
   def click_whats_new_ok_btn
@@ -23,10 +28,8 @@ class CamerasScreen
     get_add_cameras_btn.click
   end
 
-  def select_camera(name)
-  end
-
-  def rename_camera(name)
+  def invoke_add_cameras_btn
+    Appium::TouchAction.new($driver).press(x:100, y:100).wait(1000).move_to(x:100, y:400).wait(1000).release.perform
   end
 
   def click_camera(name)
