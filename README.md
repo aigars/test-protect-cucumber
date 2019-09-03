@@ -1,13 +1,10 @@
 # test-protect-cucumber
 
-###design
+### design
 feature => step_definitions => platform => steps => screens
 
-### test design
-cucumber tests with rspec matchers
-platform
-
 ### structure
+```
 test-protect-cucumber/
 ├── apps/ - temporary location for apps
 ├── config/ - config files use TOML format
@@ -20,6 +17,7 @@ test-protect-cucumber/
 └── features/
     ├── step_definitions/ - human readable tests
     └── support/ - this is where the execution of tests is configured and where all the helper classes are
+```
 
 ### run
 cucumber -p iphone_sim
