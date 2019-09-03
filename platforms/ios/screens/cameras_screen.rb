@@ -1,12 +1,5 @@
 class CamerasScreen
-  WHATS_NEW_MESSAGE = { name: "What's new?" }
-  OK_BTN = { name: "OK" }
   ADD_CAMERAS_BTN = { name: "Add Cameras" }
-
-
-  def get_whats_new_message
-    $driver.find_elements(WHATS_NEW_MESSAGE)[0]
-  end
 
   def get_add_cameras_btn
     $driver.find_elements(ADD_CAMERAS_BTN)[0]
@@ -18,10 +11,6 @@ class CamerasScreen
   
   def get_cameras
     $driver.find_elements(:xpath, '//XCUIElementTypeImage[@name="camera-gradient"]/../../..')
-  end
-
-  def click_whats_new_ok_btn
-    $driver.find_element(OK_BTN).click
   end
 
   def click_add_cameras_btn

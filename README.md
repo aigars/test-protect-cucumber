@@ -27,3 +27,10 @@ export DEVICE_CONFIG='config/devices/iphone_sim.toml'
 export SETUP_CONFIG='config/setups/two_cameras.toml'
 arc toml config/devices/iphone_sim.toml
 require "./features/support/env.rb"
+
+### tests
+login
+ckp setup
+add cameras (3 ways)
+timelapse
+2FA??

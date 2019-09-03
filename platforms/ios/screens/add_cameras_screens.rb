@@ -1,4 +1,4 @@
-class AddCamerasScreen
+class AddCamerasScreens
   CHECKMARK_BTN = { name: "checkmark cross unselected" }
   NAME_YOUR_CAMERA = { name: "Name your camera so it can be easily identified." }
   NEXT_BTN = { name: "Next" }

@@ -1,7 +1,8 @@
 class Cameras
   def initialize
     @cameras_screen = CamerasScreen.new
-    @add_cameras_screen = AddCamerasScreen.new
+    @add_cameras_screens = AddCamerasScreens.new
+    @messages_screens = MessagesScreens.new
   end
 
   def at_the_cameras_screen
@@ -16,9 +17,7 @@ class Cameras
       puts $driver.find_elements(:xpath, "//XCUIElementTypeWindow").size
       sleep 1
     end
-    if @cameras_screen.get_whats_new_message
-      @cameras_screen.click_whats_new_ok_btn
-    end
+    @messages_screens.click_ok_btn if @messages_screens.get_whats_new_message
     @cameras_screen.get_add_cameras_btn
   end
 
@@ -31,10 +30,10 @@ class Cameras
         sleep 1 #TODO: investigate
         @cameras_screen.click_add_cameras_btn
       end
-      @add_cameras_screen.deselect_cameras
-      @add_cameras_screen.select_camera(camera["mac"])
-      @add_cameras_screen.click_setup_cameras_btn
-      @add_cameras_screen.click_next_btn
+      @add_cameras_screens.deselect_cameras
+      @add_cameras_screens.select_camera(camera["mac"])
+      @add_cameras_screens.click_setup_cameras_btn
+      @add_cameras_screens.click_next_btn
     end
   end
 

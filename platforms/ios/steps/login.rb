@@ -5,7 +5,7 @@ class Login
   end
 
   def at_the_login_screen
-    @login_screen.click_allow_notifications_btn if @login_screen.get_notifications_alert
+    #@login_screen.click_allow_notifications_btn if @login_screen.get_notifications_alert
     @login_screen.get_login_screen
   end
 

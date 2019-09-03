@@ -12,9 +12,14 @@ Feature: Protect
     Then The controller should be successfully added
 
   @ios
-  Scenario: Add cameras
+  Scenario: Add cameras one by one
     Given I am at the cameras screen
-    When I add new cameras
+    When I add cameras one by one
+    Then the cameras should be successfully added
+
+  Scenario: Add cameras together
+    Given I am at the cameras screen
+    When I add cameras together
     Then the cameras should be successfully added
 
   Scenario: Remove cameras

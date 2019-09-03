@@ -4,4 +4,5 @@ platformVersion = "12.4"
 deviceName = "iPhone 7"
 automationName = "XCUITest"
 noReset = true
+autoDismissAlerts = true
 app = "/Users/asusters/Desktop/protect/test-protect-cucumber/apps/UniFi Protect.ipa"
